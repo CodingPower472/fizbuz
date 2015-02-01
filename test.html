@@ -1,0 +1,29 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/paper/bootstrap.min.css">
+</head>
+<body>
+  <script>
+  function check() {
+    var number = $('#num').val();
+    if (number%3 == 0) {
+      console.log('Activated!')
+      if (number%5 == 0) {
+        alert('Fizzbuzz')
+      }
+      }
+      else if (number%5 == 0){
+        alert('Buzz')
+      }
+      else {
+        alert(number)
+      }
+    }
+  </script>
+  <div class="container-fluid">
+    <input type="number" id="num">
+    <button class="btn btn-primary" onclick="check()">Submit</button>
+  </div>
+</body>
+</html>
