@@ -8,22 +8,30 @@
   function check() {
     var number = $('#num').val();
     if (number%3 == 0) {
-      console.log('Activated!')
       if (number%5 == 0) {
-        alert('Fizzbuzz')
-      }
-      }
-      else if (number%5 == 0){
-        alert('Buzz')
+        $('#result').text('Fizzbuzz')
       }
       else {
-        alert(number)
+        $('#result').text('Fizz')
+      }
+      }
+      else if (number%5 == 0) {
+        $('#result').text('Buzz')
+      }
+      else {
+        $('#result').text(number)
       }
     }
+    $(document).keydown(function() {
+      if (event.which == 13) {
+        check()
+      }
+    });
   </script>
   <div class="container-fluid">
     <input type="number" id="num">
     <button class="btn btn-primary" onclick="check()">Submit</button>
+    <h1 id="result"></h1>
   </div>
 </body>
 </html>
